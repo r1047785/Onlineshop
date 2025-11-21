@@ -8,8 +8,8 @@ body {
 }
 
 .top-bar {
-  background: #f5f5f5;
-  color: #333;
+  background: #51403a;
+  color: white;
   font-size: 0.85rem;
   text-align: center;
   padding: 8px 0;
@@ -102,4 +102,10 @@ body {
 
 .region-selector:hover {
   opacity: 0.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 50px;
 }

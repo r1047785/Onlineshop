@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <nav>
   <div class="top-bar">
     Free shipping: from €150 in Europe | from €200 worldwide
   </div>
@@ -52,6 +53,16 @@
         </svg>
       </a>
     </div>
+</nav>
+
+<banner class="begin-banner">
+<img src="images/banner.png" alt="Banner">
+</banner>
+
+
+
+
+
   </header>
 </body>
 </html>
