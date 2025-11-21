@@ -54,10 +54,14 @@
       </a>
     </div>
 </nav>
-
-<banner class="begin-banner">
+<section class="hero-banner">
 <img src="images/banner.png" alt="Banner">
-</banner>
+ <a href="/shop" class="shop-all-btn">SHOP ALL</a>
+
+</section>
+
+
+
 
 
 
