@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buchan</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <nav>
@@ -46,7 +46,11 @@
         </svg>
       </a>
 
+<<<<<<< HEAD
        <a href="#" class="register"><p>REGISTER</p>
+=======
+       <a href="#"><p>REGISTER</p>
+>>>>>>> 050b299a9bb5d2b51de6b6a30625bdbff58b0632
       </a>
       <a href="/cart" class="icon-btn" aria-label="Cart">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -61,10 +65,14 @@
 <img src="images/banner.png" alt="Banner">
  <a href="/shop" class="shop-all-btn">SHOP ALL</a>
 
+<<<<<<< HEAD
 </section>
 
 
 
 </header>
+=======
+</section></header>
+>>>>>>> 050b299a9bb5d2b51de6b6a30625bdbff58b0632
 </body>
 </html>

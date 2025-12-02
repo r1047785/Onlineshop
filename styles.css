@@ -90,15 +90,6 @@ body {
   justify-content: flex-end;
 }
 
-.register {
-  text-decoration: none;
-  color: #333;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: opacity 0.2s;
-}
-
 .region-selector {
   display: flex;
   align-items: center;
@@ -132,16 +123,10 @@ body {
   letter-spacing: 1.5px;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s ease;
   z-index: 10;
 }
 
 .shop-all-btn:hover {
   background-color: lightgray;
-}
-
-.test {
-  text-decoration: none;
-  color: red;
-  font-size: 20px;
 }
