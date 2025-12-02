@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buchan</title>
+    <title>StreatWare</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
       </button>
     </div>
     
-    <a href="#" class="logo">Buchan</a>
+    <a href="/" class="logo">Buchan</a>
     
     <nav class="menu">
       <a href="/">HOME</a>
@@ -39,13 +39,15 @@
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </div>
-      <div class="login">
-     <a href="#"><p>LOGIN</p></a>
-    </div>
+      <a href="/login" class="icon-btn" aria-label="Account">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+      </a>
 
-    <div class="login">
-     <a href="#"><p>REGISTER</p></a>
-    </div>
+       <a href="#"><p>REGISTER</p>
+      </a>
       <a href="/cart" class="icon-btn" aria-label="Cart">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="9" cy="21" r="1"></circle>
@@ -59,8 +61,6 @@
 <img src="images/banner.png" alt="Banner">
  <a href="/shop" class="shop-all-btn">SHOP ALL</a>
 
-</section>
-
-</header>
+</section></header>
 </body>
 </html>
