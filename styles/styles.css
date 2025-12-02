@@ -113,7 +113,6 @@ body {
   letter-spacing: 1.5px;
   border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
   z-index: 10;
 }
 
