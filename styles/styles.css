@@ -90,6 +90,15 @@ body {
   justify-content: flex-end;
 }
 
+.register {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
+}
+
 .region-selector {
   display: flex;
   align-items: center;
