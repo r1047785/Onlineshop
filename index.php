@@ -22,7 +22,7 @@
       </button>
     </div>
     
-    <a href="/" class="logo">Buchan</a>
+    <a href="#" class="logo">Buchan</a>
     
     <nav class="menu">
       <a href="/">HOME</a>
@@ -39,12 +39,13 @@
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </div>
-      <a href="/login" class="icon-btn" aria-label="Account">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-      </a>
+      <div class="login">
+     <p>LOGIN</p>
+    </div>
+
+    <div class="login">
+     <p>REGISTER</p>
+    </div>
       <a href="/cart" class="icon-btn" aria-label="Cart">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="9" cy="21" r="1"></circle>

@@ -31,25 +31,6 @@ body {
   justify-content: flex-start;
 }
 
-.search-btn,
-.icon-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #333;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.search-btn:hover,
-.icon-btn:hover {
-  opacity: 0.6;
-}
-
 .nav .logo {
   font-size: 1.75rem;
   font-weight: bold;
@@ -88,6 +69,15 @@ body {
   gap: 20px;
   align-items: center;
   justify-content: flex-end;
+}
+
+.login p {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
 }
 
 .region-selector {
