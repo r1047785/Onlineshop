@@ -219,25 +219,25 @@ body {
 }
 
 .product-info {
-  text-align: center;
+  text-align: left;
 }
 
 .product-name {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 6px;
-  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
 }
 
 .product-price {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #51403a;
 }
 
 .product-colors {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 8px;
   margin-top: 10px;
 }
@@ -254,28 +254,4 @@ body {
 .color-dot:hover {
   transform: scale(1.1);
   border-color: #51403a;
-}
-
-@media (max-width: 768px) {
-  .nav {
-    grid-template-columns: 1fr;
-    padding: 16px 20px;
-  }
-
-  .nav .menu {
-    position: static;
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-  }
-
-  .products-section {
-    padding: 0 20px;
-  }
 }

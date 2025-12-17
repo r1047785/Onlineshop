@@ -87,7 +87,7 @@
       </div>
       <div class="product-info">
         <div class="product-name">Reversible Buchan Fleece - Red</div>
-        <div class="product-price">€299.00</div>
+        <div class="product-price">€100.00</div>
         
       </div>
     </a>
@@ -99,8 +99,8 @@
         <img src="images/Item3.png" alt="Sport Watch">
       </div>
       <div class="product-info">
-        <div class="product-name">Buchan Cow Hoodie</div>
-        <div class="product-price">€199.00</div>
+        <div class="product-name">Star Striped longsleeve</div>
+        <div class="product-price">€50.00</div>
      
       </div>
     </a>
@@ -111,9 +111,53 @@
         <img src="images/Item4.png" alt="Elegant Watch">
       </div>
       <div class="product-info">
-        <div class="product-name">Elegant Rose Gold</div>
-        <div class="product-price">€349.00</div>
-       
+        <div class="product-name">Buchan Cow hoodie</div>
+        <div class="product-price">€70.00</div>
+      </div>
+    </a>
+
+
+       <a href="/product/5" class="product-card">
+      <div class="product-image">
+        <img src="images/Item5.png" alt="Elegant Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Buchan Zip-up Hoodie</div>
+        <div class="product-price">€99.00</div>
+      </div>
+    </a>
+
+
+
+       <a href="/product/6" class="product-card">
+      <div class="product-image">
+        <img src="images/Item6.png" alt="Elegant Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Buchen Cow pants</div>
+        <div class="product-price">€80.00</div>
+      </div>
+    </a>
+
+
+       <a href="/product/7" class="product-card">
+      <div class="product-image">
+        <img src="images/Item7.png" alt="Elegant Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Buchan Black Jeans</div>
+        <div class="product-price">€80.00</div>
+      </div>
+    </a>
+
+
+       <a href="/product/8" class="product-card">
+      <div class="product-image">
+        <img src="images/Item8.png" alt="Elegant Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Buchan Bleu Jeans</div>
+        <div class="product-price">€80.00</div>
       </div>
     </a>
   </div>
