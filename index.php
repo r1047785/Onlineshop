@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buchan</title>
     <link rel="stylesheet" href="styles/styles.css">
-    
 </head>
 <body>
     <nav>
@@ -47,8 +46,8 @@
         </svg>
       </a>
 
-       <a href="#" class="register"><p>REGISTER</p>
-      </a>
+       <a href="#"><p>REGISTER</p></a>
+       
       <a href="/cart" class="icon-btn" aria-label="Cart">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="9" cy="21" r="1"></circle>
@@ -57,11 +56,68 @@
         </svg>
       </a>
     </div>
+  </header>
 </nav>
-<section class="hero-banner">
-<img src="images/banner.png" alt="Banner">
- <a href="/shop" class="shop-all-btn">SHOP ALL</a>
 
-</section></header>
+<section class="hero-banner">
+  <img src="images/banner.png" alt="Banner">
+  <a href="/shop" class="shop-all-btn">SHOP ALL</a>
+</section>
+
+<section class="products-section">
+  <h2>Featured Products</h2>
+  
+  <div class="products-grid">
+   
+    <a href="/product/1" class="product-card">
+      <div class="product-image">
+        <div class="product-badge">NEW</div>
+        <img src="images/Item1.png" alt="Jacket">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Buchan Cheetah Fleece</div>
+        <div class="product-price">€249.00</div>
+      </div>
+    </a>
+
+   
+    <a href="/product/2" class="product-card">
+      <div class="product-image">
+        <img src="images/Item2.png" alt="Minimalist Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Reversible Buchan Fleece - Red</div>
+        <div class="product-price">€299.00</div>
+        
+      </div>
+    </a>
+
+   
+    <a href="/product/3" class="product-card">
+      <div class="product-image">
+        <div class="product-badge">SALE</div>
+        <img src="images/Item3.png" alt="Sport Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Buchan Cow Hoodie</div>
+        <div class="product-price">€199.00</div>
+     
+      </div>
+    </a>
+
+   
+    <a href="/product/4" class="product-card">
+      <div class="product-image">
+        <img src="images/Item4.png" alt="Elegant Watch">
+      </div>
+      <div class="product-info">
+        <div class="product-name">Elegant Rose Gold</div>
+        <div class="product-price">€349.00</div>
+       
+      </div>
+    </a>
+  </div>
+</section>
+
 </body>
 </html>
