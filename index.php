@@ -83,7 +83,7 @@
    
     <a href="/product/2" class="product-card">
       <div class="product-image">
-        <img src="images/Item2.png" alt="Minimalist Watch">
+        <img src="images/Item2.png" alt="Buchan Fleece">
       </div>
       <div class="product-info">
         <div class="product-name">Reversible Buchan Fleece - Red</div>
@@ -96,7 +96,7 @@
     <a href="/product/3" class="product-card">
       <div class="product-image">
         <div class="product-badge">SALE</div>
-        <img src="images/Item3.png" alt="Sport Watch">
+        <img src="images/Item3.png" alt="Striped longsleeve">
       </div>
       <div class="product-info">
         <div class="product-name">Star Striped longsleeve</div>
@@ -108,7 +108,7 @@
    
     <a href="/product/4" class="product-card">
       <div class="product-image">
-        <img src="images/Item4.png" alt="Elegant Watch">
+        <img src="images/Item4.png" alt="Buchan Cow hoodie">
       </div>
       <div class="product-info">
         <div class="product-name">Buchan Cow hoodie</div>
@@ -119,7 +119,7 @@
 
        <a href="/product/5" class="product-card">
       <div class="product-image">
-        <img src="images/Item5.png" alt="Elegant Watch">
+        <img src="images/Item5.png" alt="Buchan Zip-up Hoodie">
       </div>
       <div class="product-info">
         <div class="product-name">Buchan Zip-up Hoodie</div>
@@ -131,7 +131,7 @@
 
        <a href="/product/6" class="product-card">
       <div class="product-image">
-        <img src="images/Item6.png" alt="Elegant Watch">
+        <img src="images/Item6.png" alt="Buchen Cow pants">
       </div>
       <div class="product-info">
         <div class="product-name">Buchen Cow pants</div>
@@ -142,7 +142,7 @@
 
        <a href="/product/7" class="product-card">
       <div class="product-image">
-        <img src="images/Item7.png" alt="Elegant Watch">
+        <img src="images/Item7.png" alt="Buchan Black Jeans">
       </div>
       <div class="product-info">
         <div class="product-name">Buchan Black Jeans</div>
@@ -153,7 +153,7 @@
 
        <a href="/product/8" class="product-card">
       <div class="product-image">
-        <img src="images/Item8.png" alt="Elegant Watch">
+        <img src="images/Item8.png" alt="Buchan Bleu Jeans">
       </div>
       <div class="product-info">
         <div class="product-name">Buchan Bleu Jeans</div>
