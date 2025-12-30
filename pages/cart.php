@@ -54,7 +54,7 @@
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </div>
-          <a href="/login" class="icon-btn" aria-label="Account">
+          <a href="login.php" class="icon-btn" aria-label="Account">
             <svg
               width="20"
               height="20"
@@ -68,7 +68,7 @@
             </svg>
           </a>
           <a href="#"><p>REGISTER</p></a>
-          <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <a href="cart.php" class="icon-btn" aria-label="Cart">
             <svg
               width="20"
               height="20"
