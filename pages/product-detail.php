@@ -193,7 +193,6 @@ $product = $products[$productId];
             </div>
         </div>
     </div>
-
-    <script src="../scripts/product.js"></script>
+<script src="/onlinewebshop/scripts/product.js"></script>
 </body>
 </html>
