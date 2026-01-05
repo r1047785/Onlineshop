@@ -67,7 +67,7 @@
               <circle cx="12" cy="7" r="4"></circle>
             </svg>
           </a>
-          <a href="#"><p>REGISTER</p></a>
+          <a href="register.php"><p>REGISTER</p></a>
           <a href="cart.php" class="icon-btn" aria-label="Cart">
             <svg
               width="20"

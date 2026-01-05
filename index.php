@@ -61,7 +61,7 @@
 
 <section class="hero-banner">
   <img src="images/banner.png" alt="Banner">
-  <a href="/shop" class="shop-all-btn">SHOP ALL</a>
+  <a href="#" class="shop-all-btn">SHOP ALL</a>
 </section>
 
 <section class="products-section">

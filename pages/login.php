@@ -46,7 +46,7 @@
                         <circle cx="12" cy="7" r="4"></circle>
                     </svg>
                 </a>
-                <a href="register.html"><p>REGISTER</p></a>
+                <a href="register.php"><p>REGISTER</p></a>
                 <a href="../pages/cart.php" class="icon-btn" aria-label="Cart">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="9" cy="21" r="1"></circle>
