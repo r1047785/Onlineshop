@@ -46,7 +46,7 @@
         </svg>
       </a>
 
-       <a href="#"><p>REGISTER</p></a>
+       <a href="pages/register.php"><p>REGISTER</p></a>
        
       <a href="pages/cart.php" class="icon-btn" aria-label="Cart">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
