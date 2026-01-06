@@ -192,6 +192,66 @@ $product = $products[$productId];
                 </div>
             </div>
         </div>
+
+        <!-- Reviews Section -->
+        <div class="reviews-section">
+            <h2>Customer Reviews</h2>
+            
+            <!-- Existing Reviews -->
+            <div class="reviews-list">
+                <!-- Sample Review -->
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="review-author">
+                            <strong>Sarah M.</strong>
+                            <div class="review-stars">
+                                ★★★★★
+                            </div>
+                        </div>
+                        <span class="review-date">2 days ago</span>
+                    </div>
+                    <p class="review-text">
+                        Absolutely love this product! The quality is amazing and fits perfectly. Highly recommend!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Add Review Form -->
+            <div class="add-review">
+                <h3>Write a Review</h3>
+                <form class="review-form" action="submit-review.php" method="POST">
+                    <input type="hidden" name="product_id" value="<?php echo $productId; ?>">
+                    
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" name="reviewer_name" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rating</label>
+                        <div class="star-rating">
+                            <input type="radio" name="rating" value="5" id="star5" required>
+                            <label for="star5">★</label>
+                            <input type="radio" name="rating" value="4" id="star4">
+                            <label for="star4">★</label>
+                            <input type="radio" name="rating" value="3" id="star3">
+                            <label for="star3">★</label>
+                            <input type="radio" name="rating" value="2" id="star2">
+                            <label for="star2">★</label>
+                            <input type="radio" name="rating" value="1" id="star1">
+                            <label for="star1">★</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Review</label>
+                        <textarea name="review_text" rows="4" placeholder="Share your experience with this product..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-review-btn">Submit Review</button>
+                </form>
+            </div>
+        </div>
     </div>
 <script src="/onlinewebshop/scripts/product.js"></script>
 </body>

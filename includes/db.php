@@ -1,6 +1,4 @@
 <?php
-
-
 $host = "localhost";
 $dbname = "buchan";     
 $user = "root";         
