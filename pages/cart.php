@@ -14,9 +14,7 @@ session_start();
   </head>
   <body>
     <nav>
-      <div class="top-bar">
-        Free shipping: from €150 in Europe | from €200 worldwide
-      </div>
+   
 
       <header class="nav">
         <div class="nav-left">
@@ -35,7 +33,7 @@ session_start();
           </button>
         </div>
 
-        <a href="index.html" class="logo">Buchan</a>
+        <a href="../index.php" class="logo">Buchan</a>
 
         <nav class="menu">
           <a href="../index.php">HOME</a>
@@ -59,20 +57,19 @@ session_start();
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </div>
-          <a href="login.php" class="icon-btn" aria-label="Account">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </a>
-          <a href="register.php"><p>REGISTER</p></a>
+          <?php if (isset($_SESSION["user_id"])): ?>
+    <span style="margin-left:10px;">Hi, <?= htmlspecialchars($_SESSION["user_name"] ?? "user") ?></span>
+    <a href="logout.php" style="margin-left:12px;"><p>LOGOUT</p></a>
+    <?php else: ?>
+    <a href="login.php" class="icon-btn" aria-label="Account">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </svg>
+  </a>
+  <a href="register.php" style="margin-left:12px;"><p>REGISTER</p></a>
+  <?php endif; ?>
+
           <a href="cart.php" class="icon-btn" aria-label="Cart">
             <svg
               width="20"
@@ -222,7 +219,7 @@ session_start();
 
           <button class="checkout-btn">Proceed to Checkout</button>
 
-          <a href="index.html" class="continue-shopping">Continue Shopping</a>
+          <a href="../index.php" class="continue-shopping">Continue Shopping</a>
         </div>
       </div>
     </div>

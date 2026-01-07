@@ -79,7 +79,7 @@ if (!isset($products[$productId])) {
 
 $product = $products[$productId];
 
-// Database connection
+
 $host = 'localhost';
 $dbname = 'buchan';
 $username = 'root';
@@ -92,7 +92,7 @@ try {
     $pdo = null;
 }
 
-// Fetch reviews for this product
+
 $reviews = [];
 if ($pdo) {
     $stmt = $pdo->prepare("SELECT * FROM reviews WHERE product_id = :product_id ORDER BY created_at DESC");
@@ -111,9 +111,7 @@ if ($pdo) {
 </head>
 <body>
     <nav>
-        <div class="top-bar">
-            Free shipping: from €150 in Europe | from €200 worldwide
-        </div>
+    
 
         <header class="nav">
             <div class="nav-left">

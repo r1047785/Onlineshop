@@ -14,8 +14,8 @@ class RegisterService
             return "Ongeldig email adres.";
         }
 
-        if (strlen($password) < 6) {
-            return "Wachtwoord moet minstens 6 tekens zijn.";
+        if (strlen($password) < 4) {
+            return "Wachtwoord moet minstens 4 tekens zijn.";
         }
 
         if ($this->users->emailExists($email)) {

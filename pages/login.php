@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (isset($_SESSION["user_id"])) {
+  header("Location: ../index.php");
+  exit;
+}
+
 require_once __DIR__ . "/../includes/db.php";
 require_once __DIR__ . "/../includes/UserRepository.php";
 require_once __DIR__ . "/../includes/LoginService.php";
@@ -42,11 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     <nav>
-        <div class="top-bar">
-            Free shipping: from €150 in Europe | from €200 worldwide
-        </div>
-
-        <header class="nav">
+    <header class="nav">
             <div class="nav-left">
                 <button class="search-btn" aria-label="Search">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
