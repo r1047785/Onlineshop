@@ -157,39 +157,7 @@ session_start();
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-          </div>
-
-          <div class="cart-item">
-            <img
-              src="../images/item7.png"
-              alt="Buchan Black Jeans"
-              class="cart-item-image"
-            />
-            <div class="cart-item-details">
-              <h3>Buchan Black Jeans</h3>
-              <p class="item-size">Size: 32</p>
-              <p class="item-price">€80.00</p>
-            </div>
-            <div class="cart-item-quantity">
-              <button class="qty-btn minus">-</button>
-              <input type="number" value="1" min="1" class="qty-input" />
-              <button class="qty-btn plus">+</button>
-            </div>
-            <div class="cart-item-total">€80.00</div>
-            <button class="remove-btn" aria-label="Remove item">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
+    </div>  
         </div>
 
         <div class="cart-summary">
