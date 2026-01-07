@@ -255,3 +255,39 @@ body {
   transform: scale(1.1);
   border-color: #51403a;
 }
+
+.category-filter {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background: white;
+  border: 2px solid #e0e0e0;
+  padding: 12px 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.category-btn:hover {
+  border-color: #51403a;
+  color: #51403a;
+}
+
+.category-btn.active {
+  background: #51403a;
+  color: white;
+  border-color: #51403a;
+}
+
+.product-card.hidden {
+  display: none;
+}
