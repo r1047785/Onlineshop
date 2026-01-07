@@ -1,3 +1,36 @@
+<?php
+session_start();
+
+require_once __DIR__ . "/../includes/db.php";
+require_once __DIR__ . "/../includes/UserRepository.php";
+require_once __DIR__ . "/../includes/LoginService.php";
+
+$userRepo = new UserRepository($pdo);
+$service = new LoginService($userRepo);
+
+$error = "";
+$success = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = trim($_POST["email"] ?? "");
+    $password = $_POST["password"] ?? "";
+
+    $result = $service->login($email, $password);
+
+    if ($result["status"] === "SUCCESS") {
+    
+        $_SESSION["user_id"] = $result["user"]["id"];
+        $_SESSION["user_email"] = $result["user"]["email"];
+        $_SESSION["user_name"] = $result["user"]["name"];
+
+      
+        header("Location: ../index.php");
+        exit;
+    } else {
+        $error = $result["message"];
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,7 +96,19 @@
             <h1>Welcome Back</h1>
             <p class="login-subtitle">Login to your Buchan account</p>
 
-            <form class="login-form" action="login-process.php" method="POST">
+
+
+
+
+            <?php if ($error): ?>
+         <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+        <?php endif; ?>
+
+        <?php if ($success): ?>
+        <p style="color:green;"><?= htmlspecialchars($success) ?></p>
+        <?php endif; ?>
+
+            <form class="login-form" method="POST">
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="Enter your email" required>
