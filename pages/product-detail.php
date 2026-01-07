@@ -67,7 +67,6 @@ $products = [
     ]
 ];
 
-
 $productId = isset($_GET['id']) ? (int)$_GET['id'] : 1;
 
 if (!isset($products[$productId])) {
@@ -76,6 +75,27 @@ if (!isset($products[$productId])) {
 }
 
 $product = $products[$productId];
+
+// Database connection
+$host = 'localhost';
+$dbname = 'buchan';
+$username = 'root';
+$password = '';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(PDOException $e) {
+    $pdo = null;
+}
+
+// Fetch reviews for this product
+$reviews = [];
+if ($pdo) {
+    $stmt = $pdo->prepare("SELECT * FROM reviews WHERE product_id = :product_id ORDER BY created_at DESC");
+    $stmt->execute([':product_id' => $productId]);
+    $reviews = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -199,21 +219,35 @@ $product = $products[$productId];
             
             <!-- Existing Reviews -->
             <div class="reviews-list">
-                <!-- Sample Review -->
-                <div class="review-item">
-                    <div class="review-header">
-                        <div class="review-author">
-                            <strong>Sarah M.</strong>
-                            <div class="review-stars">
-                                ★★★★★
+                <?php if (count($reviews) > 0): ?>
+                    <?php foreach ($reviews as $review): ?>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="review-author">
+                                    <strong><?php echo htmlspecialchars($review['reviewer_name']); ?></strong>
+                                    <div class="review-stars">
+                                        <?php 
+                                        for ($i = 0; $i < 5; $i++) {
+                                            echo ($i < $review['rating']) ? '★' : '☆';
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                                <span class="review-date">
+                                    <?php 
+                                    $date = new DateTime($review['created_at']);
+                                    echo $date->format('M d, Y');
+                                    ?>
+                                </span>
                             </div>
+                            <p class="review-text">
+                                <?php echo htmlspecialchars($review['review_text']); ?>
+                            </p>
                         </div>
-                        <span class="review-date">2 days ago</span>
-                    </div>
-                    <p class="review-text">
-                        Absolutely love this product! The quality is amazing and fits perfectly. Highly recommend!
-                    </p>
-                </div>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <p style="color: #666; text-align: center; padding: 20px;">No reviews yet. Be the first to review this product!</p>
+                <?php endif; ?>
             </div>
 
             <!-- Add Review Form -->
