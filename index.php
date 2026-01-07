@@ -70,7 +70,7 @@
   <div class="category-filter">
     <button class="category-btn active" data-category="all">All Products</button>
     <button class="category-btn" data-category="jackets">Jackets</button>
-    <button class="category-btn" data-category="shirts">Shirts</button>
+    <button class="category-btn" data-category="shirts">Shirts/hoodies</button>
     <button class="category-btn" data-category="pants">Pants</button>
   </div>
   
@@ -169,6 +169,8 @@
     </a>
   </div>
 </section>
-
+<script src="scripts/main.js"></script>
+</body>
+</html>
 </body>
 </html>
