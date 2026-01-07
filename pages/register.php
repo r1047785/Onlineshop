@@ -1,3 +1,29 @@
+<?php
+require_once __DIR__ . "/../includes/db.php";
+require_once __DIR__ . "/../includes/UserRepository.php";
+require_once __DIR__ . "/../includes/RegisterService.php";
+
+$userRepo = new UserRepository($pdo);
+$service = new RegisterService($userRepo);
+
+$error = "";
+$success = "";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $name = trim($_POST["name"] ?? "");
+  $email = trim($_POST["email"] ?? "");
+  $password = $_POST["password"] ?? "";
+
+  $result = $service->register($name, $email, $password);
+
+  if ($result === "SUCCESS") {
+    $success = "Account aangemaakt!";
+  } else {
+    $error = $result;
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,8 +88,15 @@
         <div class="register-box">
             <h1>Create Account</h1>
             <p class="register-subtitle">Join Buchan today</p>
+            
+            <?php if ($error): ?>
+            <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+            <?php endif; ?>
 
-            <form class="register-form" action="register-process.php" method="POST">
+            <?php if ($success): ?>
+              <p style="color:green;"><?= htmlspecialchars($success) ?></p>
+            <?php endif; ?>     
+            <form class="register-form" method="POST" action="">
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
