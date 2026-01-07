@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+
 $products = [
     1 => [
         'name' => 'Buchan Cheetah Fleece',
