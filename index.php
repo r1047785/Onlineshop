@@ -66,10 +66,17 @@
 
 <section class="products-section">
   <h2>Featured Products</h2>
+
+  <div class="category-filter">
+    <button class="category-btn active" data-category="all">All Products</button>
+    <button class="category-btn" data-category="jackets">Jackets</button>
+    <button class="category-btn" data-category="shirts">Shirts</button>
+    <button class="category-btn" data-category="pants">Pants</button>
+  </div>
   
   <div class="products-grid">
    
-    <a href="pages/product-detail.php?id=1" class="product-card">
+    <a href="pages/product-detail.php?id=1" class="product-card" data-category="jackets">
       <div class="product-image">
         <div class="product-badge">NEW</div>
         <img src="images/Item1.png" alt="Jacket">
@@ -81,7 +88,7 @@
     </a>
 
    
-    <a href="pages/product-detail.php?id=2" class="product-card">
+    <a href="pages/product-detail.php?id=2" class="product-card" data-category="jackets">
       <div class="product-image">
         <img src="images/Item2.png" alt="Buchan Fleece">
       </div>
@@ -93,7 +100,7 @@
     </a>
 
    
-    <a href="pages/product-detail.php?id=3" class="product-card">
+    <a href="pages/product-detail.php?id=3" class="product-card" data-category="shirts">
       <div class="product-image">
         <div class="product-badge">SALE</div>
         <img src="images/Item3.png" alt="Striped longsleeve">
@@ -106,7 +113,7 @@
     </a>
 
    
-    <a href="pages/product-detail.php?id=4" class="product-card">
+    <a href="pages/product-detail.php?id=4" class="product-card" data-category="shirts">
       <div class="product-image">
         <img src="images/Item4.png" alt="Buchan Cow hoodie">
       </div>
@@ -117,7 +124,7 @@
     </a>
 
 
-       <a href="pages/product-detail.php?id=5" class="product-card">
+       <a href="pages/product-detail.php?id=5" class="product-card" data-category="shirts">
       <div class="product-image">
         <img src="images/Item5.png" alt="Buchan Zip-up Hoodie">
       </div>
@@ -129,7 +136,7 @@
 
 
 
-       <a href="pages/product-detail.php?id=6" class="product-card">
+       <a href="pages/product-detail.php?id=6" class="product-card" data-category="pants">
       <div class="product-image">
         <img src="images/Item6.png" alt="Buchen Cow pants">
       </div>
@@ -140,7 +147,7 @@
     </a>
 
 
-       <a href="pages/product-detail.php?id=7" class="product-card">
+       <a href="pages/product-detail.php?id=7" class="product-card" data-category="pants">
       <div class="product-image">
         <img src="images/Item7.png" alt="Buchan Black Jeans">
       </div>
@@ -151,7 +158,7 @@
     </a>
 
 
-       <a href="pages/product-detail.php?id=8" class="product-card">
+       <a href="pages/product-detail.php?id=8" class="product-card" data-category="pants">
       <div class="product-image">
         <img src="images/Item8.png" alt="Buchan Bleu Jeans">
       </div>
