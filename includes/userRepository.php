@@ -23,4 +23,13 @@ class UserRepository
         );
         $stmt->execute([$name, $email, $hash]);
     }
+
+    public function findByEmail(string $email): ?array
+{
+    $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = ? LIMIT 1");
+    $stmt->execute([$email]);
+    $user = $stmt->fetch();
+    return $user ?: null;
+}
+
 }
