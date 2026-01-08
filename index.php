@@ -24,11 +24,11 @@ session_start();
     <a href="/" class="logo">Buchan</a>
     
     <nav class="menu">
-      <a href="/">HOME</a>
+      <a href="#">HOME</a>
       <a href="/shop">SHOP</a>
       <a href="/in-stores">IN STORES</a>
       <a href="/our-story">OUR STORY</a>
-      <a href="/account">ACCOUNT</a>
+      <a href="pages/account.php">ACCOUNT</a>
     </nav>
     
     <div class="nav-right">

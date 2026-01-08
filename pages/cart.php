@@ -2,8 +2,17 @@
 session_start();
 require_once __DIR__ . "/../includes/db.php";
 
+$BASE = "/onlinewebshop"; 
+
+$flashSuccess = $_SESSION["flash_success"] ?? "";
+$flashError = $_SESSION["flash_error"] ?? "";
+unset($_SESSION["flash_success"], $_SESSION["flash_error"]);
+
 $items = [];
 $subtotal = 0;
+
+
+
 
 if (isset($_SESSION["user_id"])) {
   $userId = (int)$_SESSION["user_id"];
@@ -74,7 +83,7 @@ if ($subtotal <= 0) {
         <a href="/shop">SHOP</a>
         <a href="/in-stores">IN STORES</a>
         <a href="/our-story">OUR STORY</a>
-        <a href="/faq">FAQ</a>
+       <a href="<?= isset($_SESSION['user_id']) ? ($BASE.'/pages/account.php') : ($BASE.'/pages/login.php') ?>">ACCOUNT</a>
       </nav>
 
       <div class="nav-right">
@@ -111,6 +120,13 @@ if ($subtotal <= 0) {
 
   <div class="cart-container">
     <h1>Shopping Cart</h1>
+<?php if ($flashSuccess): ?>
+  <p style="color:green;"><strong><?= htmlspecialchars($flashSuccess) ?></strong></p>
+<?php endif; ?>
+
+<?php if ($flashError): ?>
+  <p style="color:red;"><strong><?= htmlspecialchars($flashError) ?></strong></p>
+<?php endif; ?>
 
     <div class="cart-content">
       <div class="cart-items">
@@ -186,8 +202,11 @@ if ($subtotal <= 0) {
           <span>€<?= number_format($total, 2, ".", "") ?></span>
         </div>
 
-        <button class="checkout-btn">Proceed to Checkout</button>
-        <a href="../index.php" class="continue-shopping">Continue Shopping</a>
+        <form method="POST" action="/onlinewebshop/pages/checkout.php">
+  <button class="checkout-btn" type="submit">Proceed to Checkout</button>
+</form>
+
+
       </div>
     </div>
   </div>

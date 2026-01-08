@@ -2,13 +2,15 @@
 session_start();
 require_once __DIR__ . "/../includes/db.php";
 
+$BASE = "/onlinewebshop";
+
 if (!isset($_SESSION["user_id"])) {
-  header("Location: login.php");
+  header("Location: $BASE/pages/login.php");
   exit;
 }
 
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-  header("Location: cart.php");
+  header("Location: $BASE/pages/cart.php");
   exit;
 }
 
@@ -20,7 +22,8 @@ $stmt->execute([$userId]);
 $cartId = (int)$stmt->fetchColumn();
 
 if ($cartId <= 0) {
-  header("Location: cart.php");
+  $_SESSION["flash_error"] = "Je winkelmandje is leeg.";
+  header("Location: $BASE/pages/cart.php");
   exit;
 }
 
@@ -35,10 +38,10 @@ $stmt->execute([$cartId]);
 $cartItems = $stmt->fetchAll();
 
 if (!$cartItems || count($cartItems) === 0) {
-  header("Location: cart.php");
+  $_SESSION["flash_error"] = "Je winkelmandje is leeg.";
+  header("Location: $BASE/pages/cart.php");
   exit;
 }
-
 
 $subtotal = 0.0;
 foreach ($cartItems as $it) {
@@ -50,7 +53,6 @@ $total = $subtotal + $tax;
 
 try {
   $pdo->beginTransaction();
-
 
   $stmt = $pdo->prepare("INSERT INTO orders (user_id, total) VALUES (?, ?)");
   $stmt->execute([$userId, $total]);
@@ -71,13 +73,14 @@ try {
     ]);
   }
 
-
+  
   $stmt = $pdo->prepare("DELETE FROM cart_items WHERE cart_id = ?");
   $stmt->execute([$cartId]);
 
   $pdo->commit();
 
-  header("Location: payment-success.php?order_id=" . $orderId);
+  $_SESSION["flash_success"] = "✅ Betaling gelukt! Je bestelling is geplaatst.";
+  header("Location: $BASE/pages/payment-success.php?order_id=" . $orderId);
   exit;
 
 } catch (Exception $e) {
