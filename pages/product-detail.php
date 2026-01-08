@@ -67,7 +67,7 @@ if ($imageUrl !== "" && strpos($imageUrl, "images/") === 0) {
         <a href="/shop">SHOP</a>
         <a href="/in-stores">IN STORES</a>
         <a href="/our-story">OUR STORY</a>
-        <a href="/faq">FAQ</a>
+        <a href="/account">ACCOUNT</a>
       </nav>
 
       <div class="nav-right">
