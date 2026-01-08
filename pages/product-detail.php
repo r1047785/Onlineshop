@@ -81,10 +81,8 @@ if (!isset($products[$productId])) {
 $product = $products[$productId];
 
 
-$host = 'localhost';
-$dbname = 'buchan';
-$username = 'root';
-$password = '';
+require_once __DIR__ . "/../includes/db.php";
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
@@ -178,7 +176,9 @@ if ($pdo) {
                     <?php echo $product['description']; ?>
                 </p>
 
-                <form class="product-form">
+                <form class="product-form" method="POST" action="add-to-cart.php">
+                    <input type="hidden" name="product_id" value="<?php echo $productId; ?>">
+
                     <div class="form-group">
                         <label>Size</label>
                         <div class="size-options">
@@ -195,7 +195,7 @@ if ($pdo) {
                         <label>Quantity</label>
                         <div class="quantity-selector">
                             <button type="button" class="qty-btn minus">-</button>
-                            <input type="number" value="1" min="1" class="qty-input">
+                           <input type="number" name="quantity" value="1" min="1" class="qty-input">
                             <button type="button" class="qty-btn plus">+</button>
                         </div>
                     </div>
