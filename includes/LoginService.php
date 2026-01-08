@@ -29,6 +29,6 @@ class LoginService
             return ["status" => "ERROR", "message" => "Onbekend email of wachtwoord.", "user" => null];
         }
 
-        return ["status" => "SUCCESS", "message" => "✅ Ingelogd!", "user" => $user];
+        return ["status" => "SUCCESS", "message" => "Ingelogd!", "user" => $user];
     }
 }

@@ -1,20 +1,15 @@
 <?php
 session_start();
 
-if (isset($_SESSION["user_id"])) {
-  header("Location: ../index.php");
-  exit;
-}
-
 require_once __DIR__ . "/../includes/db.php";
 require_once __DIR__ . "/../includes/UserRepository.php";
 require_once __DIR__ . "/../includes/LoginService.php";
 
 $userRepo = new UserRepository($pdo);
-$service = new LoginService($userRepo);
+$service  = new LoginService($userRepo);
 
 $error = "";
-$success = "";
+$result = null;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST["email"] ?? "");
@@ -23,16 +18,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $service->login($email, $password);
 
     if ($result["status"] === "SUCCESS") {
-    
-        $_SESSION["user_id"] = $result["user"]["id"];
-        $_SESSION["user_email"] = $result["user"]["email"];
-        $_SESSION["user_name"] = $result["user"]["name"];
+        $user = $result["user"];
 
-      
-        header("Location: ../index.php");
+        $_SESSION["user_id"]   = (int)$user["id"];
+        $_SESSION["user_name"] = $user["name"] ?? "";
+        $_SESSION["user_role"] = $user["role"] ?? "user"; 
+
+        header("Location: /onlinewebshop/index.php");
         exit;
     } else {
-        $error = $result["message"];
+        $error = $result["message"] ?? "Login mislukt.";
     }
 }
 ?>
@@ -104,11 +99,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <?php if ($error): ?>
          <p style="color:red;"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
-
-        <?php if ($success): ?>
-        <p style="color:green;"><?= htmlspecialchars($success) ?></p>
-        <?php endif; ?>
-
             <form class="login-form" method="POST">
                 <div class="form-group">
                     <label for="email">Email Address</label>
