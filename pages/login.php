@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $service->login($email, $password);
 
     if ($result["status"] === "SUCCESS") {
+        session_regenerate_id(true);
         $user = $result["user"];
 
         $_SESSION["user_id"]   = (int)$user["id"];
@@ -29,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         $error = $result["message"] ?? "Login mislukt.";
     }
+
+    
 }
 ?>
 <!DOCTYPE html>

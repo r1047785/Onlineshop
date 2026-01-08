@@ -165,7 +165,7 @@ if ($imageUrl !== "" && strpos($imageUrl, "images/") === 0) {
             <div class="review-item">
               <div class="review-header">
                 <div class="review-author">
-                  <strong><?= htmlspecialchars($review["reviewer_name"] ?? "Anonymous") ?></strong>
+                  <strong><?= e($review["review_text"]) ?></strong>
                   <div class="review-stars">
                     <?php
                       $rating = (int)($review["rating"] ?? 0);
@@ -182,7 +182,7 @@ if ($imageUrl !== "" && strpos($imageUrl, "images/") === 0) {
                   ?>
                 </span>
               </div>
-              <p class="review-text"><?= htmlspecialchars($review["review_text"] ?? "") ?></p>
+              <p class="review-text"><?= e($review["review_text"]) ?></p>
             </div>
           <?php endforeach; ?>
         <?php else: ?>
