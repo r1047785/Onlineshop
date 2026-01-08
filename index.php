@@ -29,6 +29,10 @@ session_start();
       <a href="/in-stores">IN STORES</a>
       <a href="/our-story">OUR STORY</a>
       <a href="pages/account.php">ACCOUNT</a>
+      <?php if (($_SESSION["user_role"] ?? "") === "admin"): ?>
+       <a href="/onlinewebshop/pages/admin/index.php">ADMIN</a>
+      <?php endif; ?>
+
     </nav>
     
     <div class="nav-right">
