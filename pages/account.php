@@ -43,6 +43,35 @@ $orders = $stmt->fetchAll();
         <?php endforeach; ?>
       </div>
     <?php endif; ?>
+    <h2>Wachtwoord wijzigen</h2>
+
+<?php if (!empty($_GET["pw"])): ?>
+  <?php if ($_GET["pw"] === "ok"): ?>
+    <p style="color:green;">Wachtwoord succesvol aangepast.</p>
+  <?php elseif ($_GET["pw"] === "err"): ?>
+    <p style="color:red;">Wachtwoord aanpassen mislukt.</p>
+  <?php endif; ?>
+<?php endif; ?>
+
+<form method="POST" action="change-password.php">
+  <div>
+    <label>Huidig wachtwoord</label><br>
+    <input type="password" name="current_password" required>
+  </div>
+
+  <div style="margin-top:10px;">
+    <label>Nieuw wachtwoord</label><br>
+    <input type="password" name="new_password" required>
+  </div>
+
+  <div style="margin-top:10px;">
+    <label>Nieuw wachtwoord herhalen</label><br>
+    <input type="password" name="new_password_confirm" required>
+  </div>
+
+  <button type="submit" style="margin-top:12px;">Update password</button>
+</form>
+
 
     <p style="margin-top:24px;"><a href="logout.php">Logout</a></p>
   </div>
